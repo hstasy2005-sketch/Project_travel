@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена — TripMaster</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .section {
+            padding: 4rem 1.5rem;
+        }
+        .hero.is-primary {
+            background: linear-gradient(135deg, #00d1b2, #0099ff);
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            background-color: #ffffff;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .icon.is-large i {
+            color: #00d1b2;
+        }
+        .footer .icon i {
+            color: #4a4a4a;
+        }
+        .footer .icon i:hover {
+            color: #00d1b2;
+        }
+        .message-body {
+            background-color: #f5f5f5;
+        }
+        .error-404 {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #00d1b2;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <strong>TripMaster</strong>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">Главная</a>
+                <a class="navbar-item" href="contacts.html">Контакты</a>
+                <a class="navbar-item" href="faq.html">FAQ</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="#signup">
+                            <strong>Регистрация</strong>
+                        </a>
+                        <a class="button is-light" href="#login">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="section">
+    <div class="container has-text-centered">
+        <div class="error-404">404</div>
+        <h2 class="title is-2">Ой! Страница не найдена</h2>
+        <p class="subtitle is-5">
+            Возможно, эта страница была удалена или перемещена. Попробуйте вернуться на главную.
+        </p>
+
+        <div class="buttons is-centered mt-5">
+            <a href="index.html" class="button is-primary">
+                На главную
+            </a>
+            <a href="contacts.html" class="button is-light">
+                Связаться с нами
+            </a>
+        </div>
+
+        <div class="mt-6">
+            <p class="has-text-grey">Или воспользуйтесь навигацией:</p>
+            <nav class="mt-4">
+                <a href="index.html" class="button is-text">Главная</a>
+                <a href="faq.html" class="button is-text">FAQ</a>
+                <a href="contacts.html" class="button is-text">Контакты</a>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<footer id="contact" class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <h4 class="title is-5">TripMaster</h4>
+                <p>Ваш надёжный помощник в планировании путешествий.</p>
+                <p>Email: info@tripmaster.ru</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+            </div>
+            <div class="column is-half">
+                <div class="level">
+                    <div class="level-item">
+                        <a href="#" class="icon is-large">
+                            <i class="fab fa-vk fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="level-item">
+                        <a href="#" class="icon is-large">
+                            <i class="fab fa-telegram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="has-text-centered">© 2026 TripMaster. Все права защищены.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const burger = document.querySelector('.navbar-burger');
+        const menu = document.querySelector('.navbar-menu');
+        if (burger && menu) {
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
