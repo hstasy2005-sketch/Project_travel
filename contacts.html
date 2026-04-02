@@ -78,24 +78,32 @@
             <div class="column is-6">
                 <form id="feedbackForm">
                     <div class="field">
-                        <label class="label">Имя</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Ваше имя" required>
+                        <label class="label">Имя <span class="has-text-danger">*</span></label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" id="fullname" placeholder="Иванов Иван Иванович">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
                         </div>
+                        <p class="help" id="fullnameHelp">Введите фамилию и имя</p>
                     </div>
 
                     <div class="field">
-                        <label class="label">Email</label>
-                        <div class="control">
-                            <input class="input" type="email" placeholder="example@email.com" required>
+                        <label class="label">Email <span class="has-text-danger">*</span></label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="email" id="email" placeholder="example@email.com">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
                         </div>
+                        <p class="help" id="emailHelp">Введите корректный email адрес</p>
                     </div>
 
                     <div class="field">
-                        <label class="label">Тема</label>
+                        <label class="label">Тема <span class="has-text-danger">*</span></label>
                         <div class="control">
                             <div class="select is-fullwidth">
-                                <select required>
+                                <select id="topic">
                                     <option value="" disabled selected>Выберите тему</option>
                                     <option>Предложение</option>
                                     <option>Жалоба</option>
@@ -104,27 +112,39 @@
                                 </select>
                             </div>
                         </div>
+                        <p class="help" id="topicHelp">Выберите тему обращения</p>
                     </div>
 
                     <div class="field">
                         <label class="label">Сообщение</label>
                         <div class="control">
-                            <textarea class="textarea" placeholder="Ваше сообщение..." rows="5" required></textarea>
+                            <textarea class="textarea" id="message" placeholder="Ваше сообщение..." rows="5"></textarea>
                         </div>
+                        <p class="help" id="messageHelp">До 500 символов</p>
                     </div>
 
                     <div class="field">
                         <div class="control">
                             <label class="checkbox">
-                                <input type="checkbox" required>
+                                <input type="checkbox" id="agreement" required>
                                 Соглашаюсь на обработку персональных данных
                             </label>
                         </div>
                     </div>
 
-                    <div class="field">
+                    <div class="field is-grouped is-grouped-centered">
                         <div class="control">
-                            <button class="button is-primary" type="submit">Отправить отзыв</button>
+                            <button class="button is-primary" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-paper-plane"></i>
+                                </span>
+                                <span>Отправить отзыв</span>
+                            </button>
+                        </div>
+                        <div class="control">
+                            <button type="reset" class="button is-light">
+                                <span>Очистить</span>
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -190,6 +210,8 @@
         }
     });
 </script>
+<script src="scripts/validation.js"></script>
+<script src="scripts/consoleLogger.js"></script>
 
 </body>
 </html>
